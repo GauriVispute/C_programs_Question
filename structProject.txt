@@ -1,0 +1,58 @@
+#include<stdio.h>
+typedef struct collegeName{
+    char clgName[50];
+}clgN;
+typedef struct student{
+    int rollno;
+    char studName[50];
+    char enrolledCourse[50];
+}stud;
+typedef struct teacher{
+    int trId;
+    char trName[50];
+}tr;
+struct staff{
+    int staffId;
+    char staffName[50];
+    char staffType[20];
+};
+  
+  
+// fuctions of Every structure 
+
+int studentDetailsFun(struct student *ptr ,int *quantity,int *count){
+    printf("Enter Student Name : ");
+    fgets((*ptr).studName,50,stdin);
+    puts(ptr->studName);
+     if(*quantity != *count){
+        return (*quantity+1);
+    }
+}
+int main(){
+/*clgN clg;
+ printf("Enter College Name : ");
+ scanf("%s",clg.clgName);
+ printf("%s",clg.clgName);
+ */
+ int key;
+ printf("\t1]Add Student Details \n\t2]Add Teacher Details \n\t3]Add Teacher Details ");
+ printf("\nEnter your choice : ");
+ scanf("%d",&key);
+ int count = 0;
+ int quantity = 50;
+ stud studDetail [quantity];
+ tr trDetail [quantity];
+ struct staff staffDetail[quantity];
+ switch(key){
+     case 1 : count  = 1 ; 
+     if (studentDetailsFun(studDetail,&quantity,&count) != quantity){
+          printf("Data succusfully added !");
+     }
+              
+     
+ }
+ printf("Enter Student Name : ");
+    fgets(ptr->studName,50,stdin);
+    puts(ptr->studName);
+    return 0;
+}
